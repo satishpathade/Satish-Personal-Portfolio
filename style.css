@@ -1,0 +1,685 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b60b0b;
+}
+::-webkit-scrollbar-track {
+  background: #cfcfcfce;
+} 
+
+/* Body styles 
+====================================================>*/
+.main-container {
+  color: #eeeeff;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #f0f8ffc7;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  padding: 0.4rem 0.3rem 0.2rem 0.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  font-weight: 600;
+  color: #eeeeff;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #b50b0b;
+  transition: 0.4s ease;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
+
+/* Contact icon */
+#i-logo {
+   color: #f0f8ffc7;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.4rem;
+  transition: 300ms;
+  border-radius: 50%;
+}
+
+#i-logo:hover {
+  color: #eeeeff;
+  transform: translateY(-3px);
+}
+
+/* Hamburger menu */
+#menu-icon {
+  display: none;
+}
+
+/* Home section
+===============================================> */
+.home-modern {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #000;
+}
+
+.home-img img {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.home-text {
+  font-size: 2rem;
+  color: #f0f8ff;
+  width: 75%;
+  padding: 1rem;
+}
+
+.name,
+.line2 {
+  font-size: 2rem;
+  padding: 0.7rem;
+  font-family: Tahoma;
+}
+
+#element {
+  color: #ff0000;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  padding: 0.7rem;
+  font-family: 'Times New Roman';
+  text-transform: uppercase;
+}
+
+/* About section 
+===================================================> */
+.about-modern {
+  /* padding: 2rem 1rem; */
+  background-color: #eeeeff;
+}
+
+.container {
+  max-width: 100%;
+  margin: 1rem;
+  color: #000;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text .subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  color: #af0b0b;
+  padding: 1rem;
+  margin: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Times New Roman';
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 2rem;
+  letter-spacing: -0.7px;
+  color: #111;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.profile {
+  color: #000;
+  padding: 20px 30px;
+  margin-top: 20px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile h3 {
+  width: 80%;
+  color: #000;
+  font-size: 1rem;
+  margin: 20px 0 0 40px;
+  text-transform: uppercase;
+}
+
+.profile p {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.7;
+  margin-top: 1rem 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Work Section
+================================================>*/
+.work-modern {
+  height: 100%;
+  width: 100%;
+  background-image: url("img/bg4.jpg");
+  background-color: #141414;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.work-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+  margin: 0 1rem;
+}
+
+.work-modern .work-text {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.work-text .subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  color: #b50b0b;
+  padding: 2rem;
+  margin: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid #ffffff;
+}
+
+.work-text h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: Tahoma;
+  color: #000;
+}
+
+/* Project Card */
+
+.project-card {
+  position: relative;
+  max-width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.2);
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #eeeeff;
+  background: #000;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-family: tahoma;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.view-btn {
+  padding: 0.7rem 1.5rem;
+  background: #ff0000;
+  border: none;
+  border-radius: 6px;
+  color: #eeeeff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.view-btn:hover {
+  transform: scale(1.05);
+  background: #af0b0b;
+}
+
+/* Resume section
+=================================================> */
+.resume-modern {
+  color: #000;
+  background-color: #eeeeff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem;
+}
+
+h2 {
+  color: #111111e7;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  position: relative;
+  padding-left: 2.5rem;
+  font-family: 'Times New Roman';
+}
+
+.timeline {
+  position: relative;
+  margin-left: 30px;
+  border-left: 2px solid #af0b0b;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #111111e7;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.career-box {
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.career-entry {
+  margin: 30px;
+}
+
+.career-entry h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.career-entry h4 span {
+  font-weight: normal;
+  text-transform: none;
+  margin-left: 10px;
+  color: #242424f1;
+}
+
+.career-entry small {
+  font-size: 12px;
+  color: #282828dc;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.career-entry p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #000;
+}
+.timeline-item span {
+  font-weight: 500;
+  margin-left: -10px;
+}
+
+.skills {
+  margin-top: 3rem;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress {
+  height: 10px;
+  background-color: #05a605;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.download a{
+  padding: 20px 130px 20px 130px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #eeeeff;
+  background-color: #000;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.download a:hover {
+  background-color: #af0b0b;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* Connect Section
+==================================================> */
+.connect-modern {
+  height: 100%;
+  margin: 1rem 5rem 0 5rem;
+}
+
+.connect-container {
+  margin-top: 3rem;
+  padding: 3rem 1rem 1rem 2rem;
+}
+
+.connect-container .touch {
+  margin-top: 4rem;
+  padding-top: 20px;
+  border-top: 1px solid #b50b0b;
+  height: 90px;
+  width: 160px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.connect-email {
+  color: #ff0000;
+  font-size: 5rem;
+  text-decoration: none;
+}
+
+.footer-para {
+  font-size: 2.8rem;
+  width: 100%;
+  margin: 50px 0 50px 0;
+  font-family: tahoma;
+}
+
+.footer-para a {
+  color: #ff0000;
+  text-decoration: none;
+  font-family: tahoma;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social .social-icon a {
+  color: #ffffff90;
+  font-size: 1.3rem;
+  padding-left: 8px;
+  letter-spacing: 2px;
+   font-family: tahoma;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+/* ================================================ */
+
+/* Responsive Design for Tablet and Mobile =====================================> */
+
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0;
+  }
+  .home-modern,
+  .work-container,
+  .connect-container {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Keep horizontal */
+    height: 50px;
+    padding: 6px 4px;
+    gap: 0.3rem;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 0.7rem;
+    width: auto;
+    align-items: center;
+  }
+  .main-container, .home-modern, .about-modern, .work-modern, .resume-modern, .connect-modern {
+    margin-top: 50px; /* Ensure content is not hidden behind navbar */
+  }
+  .home-modern {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .home-img img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .home-text {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  .about-modern,
+  .work-modern,
+  .resume-modern,
+  .connect-modern {
+    min-height: 100vh;
+    padding: 2rem 0.5rem;
+  }
+  .work-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0.5rem;
+  }
+  .project-card {
+    max-width: 100%;
+    height: 200px;
+  }
+  .footer-social {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .footer-para {
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+  .download a {
+    padding: 15px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row; /* Keep horizontal */
+    height: 45px;
+    padding: 4px 2px;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 0.5rem;
+    width: auto;
+    align-items: center;
+  }
+  .main-container, .home-modern, .about-modern, .work-modern, .resume-modern, .connect-modern {
+    margin-top: 45px; /* Ensure content is not hidden behind navbar */
+  }
+  .home-text, .about-text, .work-text, .resume-modern, .connect-modern {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+  .project-card {
+    height: 150px;
+  }
+  .footer-para {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  .download a {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  .footer-social .social-icons {
+    gap: 0.5rem;
+  }
+  .connect-email {
+    font-size: 2rem;
+    word-break: break-all;
+  }
+}
+
+/* Responsive email font size for connect section */
+@media (max-width: 768px) {
+  .connect-email {
+    font-size: 2.5rem;
+    word-break: break-all;
+  }
+}
+
+/* Ensure all main sections take at least full viewport height on mobile/tablet */
+.home-modern,
+.about-modern,
+.work-modern,
+.resume-modern,
+.connect-modern {
+  min-height: 100vh;
+  box-sizing: border-box;
+}

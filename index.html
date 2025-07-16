@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satish-Personal-Portfolio</title>
+
+    <!-- Favicon
+     ====================================== -->
+    <link rel="icon" type="image/png" href="img/Logo.svg">
+
+    <!-- google font 
+     ====================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS file
+      ======================================= -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--font icon
+    =================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS CSS
+         ================================================= -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Main Conatiner -->
+    <div class="main-container">
+        <!-- head -->
+        <header class="head">
+
+            <!-- navbar -->
+            <nav class="navbar">
+
+                <!-- logo -->
+                <div class="logo">
+                    <a href="#home"><img src="img/Logo.svg" alt="satish-Logo" /></a>
+                </div>
+
+                <!-- nav-items  -->
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active underline-hover">Home</a>
+                    <a href="#about" class="underline-hover">About</a>
+                    <a href="#works" class="underline-hover">Works</a>
+                    <a href="#resume" class="underline-hover">Resume</a>
+                    <a href="#connect" class="underline-hover">Connect</a>
+                </div>
+
+                <!-- navbar-contact-items  -->
+                <!-- <div class="contact-icon"> -->
+                    <!-- git-hub  -->
+                    <!-- <a href="https://github.com/satishpathade"><i class="fa-brands fa-square-github"
+                            id="i-logo"></i></a> -->
+
+                    <!-- linked in -->
+                    <!-- <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"><i
+                            class="fa-brands fa-linkedin" id="i-logo"></i></a> -->
+
+                    <!-- x.com -->
+                    <!-- <a href="https://x.com/_satishpathade"><i class="fa-brands fa-square-x-twitter" id="i-logo"></i></a> -->
+
+                    <!-- instagram -->
+                    <!-- <a href="#"><i class="fa-brands fa-square-instagram" id="i-logo"></i></a> -->
+
+                    <!-- menu  -->
+                    <!-- <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleMenu()"></i> -->
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- main-home-page 
+     =========================================================== -->
+        <section class="home-modern" id="home">
+            <div class="home-img">
+                <img src="img/hero-img.png" alt="satishimg">
+            </div>
+            <div class="home-text">
+                <p class="name">I'm Satish Pathade</p>
+                <p class="line2">Development and Deployment <br> to deliver seamless user experiences..</p>
+                <span id="element"></span>
+            </div>
+        </section>
+
+        <!-- about-page
+     =========================================================== -->
+        <section class="about-modern" id="about">
+            <div class="container">
+                <div class="container-top-section">
+                    <div class="about-text">
+                        <p class="subtitle">About Me</p>
+                        <h1>My passion and goal is to help you make your business standout.</h1>
+
+                        <div class="profile">
+                            <p>
+                                A passionate and dedicated Full-Stack Developer with a focus on creating seamless,
+                                responsive, and user-friendly web applications.
+
+                                I'm diving deeper into Cloud Computing and DevOps to enhance my deployment skills
+                                and build scalable, production-ready systems. I believe in continuous learning and love
+                                tackling new challenges that push me beyond my limits.
+
+                                My goal is to contribute to impactful projects that make a real difference while
+                                continuously evolving as a developer and problem-solver.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- work section 
+     ========================================================= -->
+        <section class="work-modern" id="works">
+            <div class="work-container">
+                <div class="work-text">
+                    <p class="subtitle" id="works">Works</p>
+                    <h1>Here are some of my selected works <br> I have done lately. Feel free to check them out.</h1>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/portfolio.png" alt="Project Thumbnail">
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p> A sleek and fully responsive developer portfolio crafted with HTML, CSS, and JavaScript —
+                            designed
+                            to impress. Showcasing my best work, animated skills, and career path in a smooth,
+                            scroll-driven
+                            user experience.</p>
+                        <a href="#" class="view-btn">Inspect the Build</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/simon-says.png" alt="Project Thumbnail">
+                    <div class="project-info">
+                        <h3>Simon Say's Game</h3>
+                        <p>An interactive and colorful memory game developed using HTML, CSS, and JavaScript. Players
+                            must
+                            repeat an increasingly complex pattern of lights.
+                            this project showcases my
+                            skills in JavaScript DOM manipulation, event handling.</p>
+                        <a href="#" class="view-btn">Try Now</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/portfolio.png" alt="Project Thumbnail">
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p> A sleek and fully responsive developer portfolio crafted with HTML, CSS, and JavaScript —
+                            designed
+                            to impress. Showcasing my best work, animated skills, and career path in a smooth,
+                            scroll-driven
+                            user experience.</p>
+                        <a href="#" class="view-btn">Inspect the Build</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/simon-says.png" alt="Project Thumbnail">
+                    <div class="project-info">
+                        <h3>Simon Say's Game</h3>
+                        <p>An interactive and colorful memory game developed using HTML, CSS, and JavaScript. Players
+                            must
+                            repeat an increasingly complex pattern of lights.
+                            this project showcases my
+                            skills in JavaScript DOM manipulation, event handling.</p>
+                        <a href="#" class="view-btn">Try Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- resume section 
+     ========================================================= -->
+        <section id="resume" class="resume-modern">
+            <div class="container">
+                <h2>Education &nbsp;<i class="fas fa-graduation-cap"></i></h2>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="career-entry">
+                            <h4>BCA <span>Bachelor of Computer Application</span></h4>
+                            <small>August 2022 – May 2025</small>
+                            <p>Built a strong foundation in programmig, web development, and databases through hands-on
+                                academic and project-based learning
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="career-entry">
+                            <h4>MCA<span>Master in Cloud Architect</span></h4>
+                            <small>June 2025 – Present</small>
+                            <p>
+                                Specializing in cloud infrastructure and DevOps, focusing on CI/CD, deployment
+                                automation,
+                                and scalable architectures
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2>Experience &nbsp;<i class="fas fa-briefcase"></i> </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="career-entry">
+                            <h4>Cravita Technology<span>MERN Stack Intern</span></h4>
+                            <small>June 2025 – Jan</small>
+                            <p>
+                                Crafted dynamic web apps using the MERN Stack-developing clean UI components and
+                                efficient
+                                backend logic
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="career-entry">
+                            <h4>Cravita Technology<span> Cloud Computing Interns</span></h4>
+                            <small>June 2025 – Jan</small>
+                            <p>
+                                Worked on real-time cloud solutions from automating developments to optimizing
+                                infrastructure using modern DevOps tools
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2>Ready For</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <span>Web Design</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MERN Stack Developer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Cloud Engineer AWS</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>DevOps Engineer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="download">
+                        <a href="resume.pdf" download class="resume-btn">Download CV</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- connect section 
+     ========================================================= -->
+        <section class="connect-modern" id="connect">
+            <div class="connect-container">
+                <div class="touch-text">
+                    <p class="touch">get in touch</p>
+                </div>
+
+                <div class="connect-mail">
+                    <a href="mailto:pathadesatish0@gmail.com" class="connect-email">pathadesatish0@gmail.com</a>
+                </div>
+
+                <div class="footer-para">
+                    <p class="footer-para">Great ideas deserve to be built and meaningful work begins with a simple
+                        “Hello.”
+                        Whether you're exploring something new, looking to collaborate, or just want to connect my inbox
+                        is always open.
+                        <a href="mailto:pathadesatish0@gmail.com">Email</a>
+                    </p>
+                </div>
+
+                <div class="footer-social">
+                    <div class="social-icon">
+                        <!-- <p>Social</p> -->
+                        <a href="">Linkedin</a>
+                        <a href="https://x.com/_satishpathade">X</a>
+                        <a href="https://github.com/satishpathade">github</a>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <!-- type.JS annimation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JS file  -->
+    <script src="app.js"> </script>
+
+</body>
+
+</html>
