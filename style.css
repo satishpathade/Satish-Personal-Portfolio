@@ -17,9 +17,10 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #b60b0b;
 }
+
 ::-webkit-scrollbar-track {
   background: #cfcfcfce;
-} 
+}
 
 /* Body styles 
 ====================================================>*/
@@ -34,11 +35,12 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   padding: 15px 30px;
   position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 1;
+  height: 60px;
+  z-index: 1000;
   background-color: #000;
 }
 
@@ -53,50 +55,22 @@ html {
 
 .nav-links a {
   color: #f0f8ffc7;
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  padding: 0.4rem 0.3rem 0.2rem 0.3rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   text-decoration: none;
-  transition: 300ms;
+  transition: 0.3s;
 }
 
-.nav-links a.active,
 .nav-links a:hover {
-  font-weight: 600;
-  color: #eeeeff;
-}
-
-.underline-hover {
-  position: relative;
-  display: inline-block;
   color: #fff;
-  text-decoration: none;
-  padding-bottom: 1px;
+  font-weight: bold;
 }
 
-.underline-hover::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #b50b0b;
-  transition: 0.4s ease;
-}
-
-.underline-hover:hover::after {
-  width: 100%;
-}
-
-/* Contact icon */
 #i-logo {
-   color: #f0f8ffc7;
+  color: #f0f8ffc7;
   font-size: 1rem;
-  background-color: transparent;
   padding: 0.4rem;
-  transition: 300ms;
+  transition: 0.3s;
   border-radius: 50%;
 }
 
@@ -105,10 +79,78 @@ html {
   transform: translateY(-3px);
 }
 
-/* Hamburger menu */
 #menu-icon {
   display: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
 }
+
+/* Mobile nav hidden by default */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100dvh;
+  width: 50%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  gap: 1.5rem;
+  transition: 0.4s ease;
+  z-index: 9;
+  text-align: center;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #f0f8ffc7;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: #fff;
+}
+
+.mobile-contact {
+  margin: 1rem auto 0 auto;
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+/* Hide menu icon on desktop */
+#menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #f0f8ffc7;
+  cursor: pointer;
+}
+
+/* Responsive rules */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-icon {
+    display: none !important;
+  }
+}
+
 
 /* Home section
 ===============================================> */
@@ -154,14 +196,13 @@ html {
 /* About section 
 ===================================================> */
 .about-modern {
-  /* padding: 2rem 1rem; */
   background-color: #eeeeff;
 }
 
 .container {
-  max-width: 100%;
-  margin: 1rem;
   color: #000;
+  max-width: 100%;
+  margin: 1rem 0 1rem 0;
 }
 
 .about-text {
@@ -170,12 +211,12 @@ html {
 }
 
 .about-text .subtitle {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 0.4rem;
   color: #af0b0b;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Times New Roman';
@@ -188,20 +229,19 @@ html {
   letter-spacing: -0.7px;
   color: #111;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+    font-family: Tahoma;
 }
 
-.profile {
+.profile-para {
   color: #000;
   padding: 20px 30px;
-  margin-top: 20px;
+  margin-top: 1rem;
   line-height: 1.8;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.profile h3 {
+.profile-para h3 {
   width: 80%;
   color: #000;
   font-size: 1rem;
@@ -209,7 +249,7 @@ html {
   text-transform: uppercase;
 }
 
-.profile p {
+.profile-para p {
   font-size: 1.3rem;
   color: #333;
   line-height: 1.7;
@@ -222,19 +262,20 @@ html {
 .work-modern {
   height: 100%;
   width: 100%;
-  background-image: url("img/bg4.jpg");
+  background-image: url("img/work-background-bg.jpg");
   background-color: #141414;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .work-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem;
   margin: 0 1rem;
 }
 
@@ -256,14 +297,15 @@ html {
   margin: 4rem;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
 }
 
 .work-text h1 {
   font-size: 3rem;
   text-align: center;
   font-family: Tahoma;
-  color: #000;
+  color: #eeeeff;
+  text-shadow: 4px 4px #000;
 }
 
 /* Project Card */
@@ -275,6 +317,7 @@ html {
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 3rem;
 }
 
 .project-card img {
@@ -334,13 +377,13 @@ html {
   color: #eeeeff;
   text-decoration: none;
   font-weight: 500;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .view-btn:hover {
-  transform: scale(1.05);
-  background: #af0b0b;
+  background: #c20707;
+  transition: 400ms;
 }
+
 
 /* Resume section
 =================================================> */
@@ -356,12 +399,12 @@ html {
 }
 
 h2 {
-  color: #111111e7;
+  color: #000000e7;
   font-size: 1.7rem;
   margin-top: 3rem;
   position: relative;
   padding-left: 2.5rem;
-  font-family: 'Times New Roman';
+  font-family: 'Tahoma';
 }
 
 .timeline {
@@ -423,13 +466,19 @@ h2 {
   line-height: 1.6;
   color: #000;
 }
+
 .timeline-item span {
   font-weight: 500;
   margin-left: -10px;
 }
 
 .skills {
-  margin-top: 3rem;
+  margin: 3rem auto;
+  background: #eeeeff;
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 4px 4px 15px #000000aa;
+  max-width: 700px;
 }
 
 .skill {
@@ -439,7 +488,9 @@ h2 {
 .skill span {
   display: block;
   margin-bottom: 5px;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000000bb;
 }
 
 .progress-bar {
@@ -458,10 +509,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3rem;
+  margin: 3rem auto -2.5rem auto;
+  ;
 }
 
-.download a{
+.download a {
   padding: 20px 130px 20px 130px;
   font-weight: 600;
   font-size: 1rem;
@@ -510,176 +562,529 @@ h2 {
   text-decoration: none;
 }
 
-.footer-para {
+.connect-para {
   font-size: 2.8rem;
   width: 100%;
   margin: 50px 0 50px 0;
   font-family: tahoma;
 }
 
-.footer-para a {
+.connect-para a {
   color: #ff0000;
   text-decoration: none;
   font-family: tahoma;
 }
 
-.footer-social {
-  display: flex;
-  justify-content: end;
-  margin: 2rem;
+
+/* footer section
+====================================================> */
+
+.footer-section {
+  color: #eeeeff;
+  padding: 3rem 1rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid #b50b0b;
+  margin-top: 5rem;
 }
 
-.footer-social .social-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url('https://cdn.svgator.com/images/2022/06/wave-animation.svg') repeat-x;
+  background-size: cover;
+  animation: wave 10s linear infinite;
 }
 
-.footer-social .social-icon a {
-  color: #ffffff90;
-  font-size: 1.3rem;
-  padding-left: 8px;
-  letter-spacing: 2px;
-   font-family: tahoma;
-  text-transform: lowercase;
-  transition: color 0.3s ease;
-  text-decoration: none;
+.footer-note {
+  font-size: 13px;
+  color: #bbbbbbd4;
+  margin-top: 30px;
+  animation: fadeInUp 1.6s ease-out;
 }
 
-/* ================================================ */
 
-/* Responsive Design for Tablet and Mobile =====================================> */
+/* ========== Responsive Design for Tablet and Mobile ========================================================> */
 
+/* Large Tablet | Small Laptop 1024px
+============================================== */
 @media (max-width: 1024px) {
-  .main-container {
+  * {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
-  .home-modern,
-  .work-container,
-  .connect-container {
-    padding: 2rem 1rem;
-    gap: 1rem;
-  }
-  .container {
-    padding: 2rem 1rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Keep horizontal */
-    height: 50px;
-    padding: 6px 4px;
-    gap: 0.3rem;
+  body {
+    overflow-x: hidden;
   }
+
+  .navbar {
+    height: 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
   .nav-links {
     flex-direction: row;
-    gap: 0.7rem;
+    gap: 2rem;
+    align-items: center;
+  }
+    .nav-links a, #i-logo {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .main-container {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .home-modern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-modern,
+  .work-modern,
+  .resume-modern {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+
+  .home-text {
+    margin-top: -100px;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .name,
+  .line2 {
+    font-size: 2.5rem;
+    padding: 20px;
+  }
+
+  #element {
+    font-size: 5rem;
+    padding: 20px;
+  }
+
+.about-text .subtitle{
+  font-size: 2rem;
+  margin-top: 90px;
+}
+.about-text h1 {
+    font-size: 3rem;
+  }
+
+  .profile-para {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .profile-para p {
+    padding: 1rem 2rem;
+    font-size: 2.2rem;
+  }
+  .work-text .subtitle {
+    font-size: 2.5rem;
+    margin-top: 80px;
+  }
+  .work-text h1 {
+    font-size: 4rem;
+  }
+.project-card{
+    max-width: 650px;
+    height: 450px
+}
+  .resume-modern {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    height: 300px;
+  }
+
+  .home-modern,
+  .about-modern,
+  .work-modern,
+  .resume-modern {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  /* Connect Section */
+  .connect-modern {
+    padding: 2rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .connect-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .connect-container .touch {
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    width: 70vw;
+    letter-spacing: 1.2px;
+    text-align: start;
+    border: none;
+  }
+
+  .connect-email {
+    font-size: 2.8rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .connect-para {
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    width: 75vw;
+  }
+
+  .footer-section {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    bottom: 0;
+  }
+}
+
+
+/* Tablet Responsive 768px
+============================================== */
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+    bottom: 0;
+  }
+
+  .navbar {
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  #menu-icon {
+    font-size: 2.4rem;
+  }
+
+  .main-container {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .home-modern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-modern,
+  .work-modern,
+  .resume-modern {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+
+  .home-text {
+    margin-top: -150px;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .name,
+  .line2 {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  #element {
+    font-size: 3.5rem;
+    padding: 20px;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .profile-para {
+    padding: 0.5rem 1rem;
+  }
+
+  .profile-para p {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .work-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .resume-modern {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .project-card {
+    height: 260px;
+  }
+
+  .home-modern,
+  .about-modern,
+  .work-modern,
+  .resume-modern {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  /* Connect Section */
+  .connect-modern {
+    padding: 2rem 1.5vw;
+    text-align: center;
+    height: 100dvh;
+  }
+
+  .connect-container {
+    margin-top: 2rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .connect-container .touch {
+    margin: 1.5rem auto;
+    font-size: 1rem;
+    width: auto;
+    letter-spacing: 1.5px;
+    border-top-width: 2px;
+    text-align: start;
+    border: none;
+  }
+
+  .connect-email {
+    display: block;
+    color: #ff0000;
+    font-size: 3rem;
+    margin: 1.2rem auto 0 auto;
+    line-height: 1.2;
+    border-radius: 7px;
+    text-align: center;
+    transition: font-size 0.2s;
+  }
+
+  .connect-para {
+    font-size: 3rem;
+    width: 80vw;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .footer-section {
+    padding: 2rem;
+    text-align: center;
+    bottom: 0;
+  }
+}
+
+
+/* mobile 480px
+============================================== */
+@media (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-direction: row;
+    height: 60px;
+    margin-top: 30px;
+    width: 100%;
+    /* padding: 1.5rem 1rem; */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 0.5rem;
     width: auto;
     align-items: center;
   }
-  .main-container, .home-modern, .about-modern, .work-modern, .resume-modern, .connect-modern {
-    margin-top: 50px; /* Ensure content is not hidden behind navbar */
+  .logo img, #menu-icon{
+    height: 50px;
   }
-  .home-modern {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-  }
-  .home-img img {
-    max-width: 100%;
-    width: 100%;
-  }
-  .home-text {
-    width: 100%;
-    font-size: 1.3rem;
-    padding: 0.5rem;
-  }
+
+  .main-container,
+  .home-modern,
   .about-modern,
   .work-modern,
   .resume-modern,
   .connect-modern {
-    min-height: 100vh;
-    padding: 2rem 0.5rem;
+    margin-top: 0;
+    padding-top: 30px;
   }
-  .work-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 0.5rem;
-  }
-  .project-card {
-    max-width: 100%;
-    height: 200px;
-  }
-  .footer-social {
-    justify-content: center;
-    margin: 1rem 0;
-  }
-  .footer-para {
-    font-size: 2rem;
-    margin: 30px 0;
-  }
-  .download a {
-    padding: 15px 30px;
-    font-size: 0.9rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: row; /* Keep horizontal */
-    height: 45px;
-    padding: 4px 2px;
+  .home-text {
+    margin-top: -30px;
+    padding: 1rem;
   }
-  .nav-links {
-    flex-direction: row;
-    gap: 0.5rem;
-    width: auto;
-    align-items: center;
+
+  .name {
+    font-size: 1.5rem;
   }
-  .main-container, .home-modern, .about-modern, .work-modern, .resume-modern, .connect-modern {
-    margin-top: 45px; /* Ensure content is not hidden behind navbar */
+
+  .line2 {
+    font-size: 1.5rem;
+    padding: 15px;
   }
-  .home-text, .about-text, .work-text, .resume-modern, .connect-modern {
-    font-size: 1rem;
-    padding: 0.2rem;
+
+  #element {
+    font-size: 2.4rem;
+    width: 100%;
   }
-  .project-card {
-    height: 150px;
-  }
-  .footer-para {
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+  .about-text h1{
     font-size: 1.2rem;
-    margin: 20px 0;
+    padding: 1rem;
+    margin: 0;
   }
-  .download a {
-    padding: 10px 10px;
-    font-size: 0.8rem;
+  .about-text .subtitle {
+    font-size: 1.5rem;
+    margin-top: 50px;
   }
-  .footer-social .social-icons {
-    gap: 0.5rem;
+  .profile-para {
+    padding: 0.5rem 0.5rem;
   }
-  .connect-email {
-    font-size: 2rem;
-    word-break: break-all;
+  .profile-para p {
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
   }
-}
 
-/* Responsive email font size for connect section */
-@media (max-width: 768px) {
-  .connect-email {
+  .work-text h1 {
     font-size: 2.5rem;
-    word-break: break-all;
+  }
+  .project-card {
+    height: 220px;
+  }
+  .project-card img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .resume-modern {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .download a{
+    padding: 10px 50px;
+    font-size: 1.1rem;
+  }
+
+
+  .home-modern,
+  .about-modern,
+  .work-modern,
+  .resume-modern {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  /* connext section */
+  .connect-modern {
+    margin: 0.8rem 0.2rem 0 0.2rem !important;
+    padding: 1.2rem 1vw !important;
+    text-align: center;
+  }
+
+  .connect-container {
+    margin-top: 2.1rem;
+    padding: 1.2rem 0.1rem 0.9rem 0.1rem;
+  }
+
+  .connect-container .touch {
+    margin: 1.6rem auto 0 auto;
+    padding-top: 12px;
+    font-size: 0.85rem;
+    width: 90vw;
+    min-width: 150px;
+    max-width: 280px;
+    letter-spacing: 2px;
+    border-top-width: 2px;
+  }
+
+  .connect-email {
+    display: block;
+    color: #ff0000;
+    font-size: 1.7rem;
+    padding: 0.1rem;
+    margin: 1rem auto 0 auto;
+    line-height: 1.1;
+    border-radius: 7px;
+    text-align: center;
+    transition: font-size 0.2s;
+    box-sizing: border-box;
+  }
+
+  .connect-para {
+    font-size: 2rem !important;
+    width: 80vw;
+    margin: 32px auto;
+    text-align: center;
+  }
+
+  .footer-section {
+    padding: 2rem 1rem;
+    text-align: center;
   }
 }
 
-/* Ensure all main sections take at least full viewport height on mobile/tablet */
-.home-modern,
-.about-modern,
-.work-modern,
-.resume-modern,
-.connect-modern {
-  min-height: 100vh;
-  box-sizing: border-box;
+
+/* prevent horizontal scalling */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
 }

@@ -7,11 +7,13 @@ The main purpose of this portfolio is to showcase my web development skills and 
 ## Features
 
 - Responsive design
+- Hero section with engaging intro & img
 - About section with personal details
-- Skills section with progress indicators
 - Projects section with live links
-- Contact section with email/social links
-- Resume download option (if added)
+- Skills section with progress indicators
+- Resume download option
+- Contact section with email
+- Smooth scrolling and AOS animations
 
 ## How to Use
 
@@ -20,7 +22,7 @@ The main purpose of this portfolio is to showcase my web development skills and 
 
 2. Open the folder in VS Code or any editor  
    `cd satish-personal-portfolio`
-
+   
 3. Run the project by opening `index.html` in a browser
 
 ## Live Site
