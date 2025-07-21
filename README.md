@@ -28,7 +28,7 @@ The main purpose of this portfolio is to showcase my web development skills and 
 ## Live Site
 
 You can view the live website here:  
-https://satishpathade.github.io/satish-personal-portfolio
+https://github.com/satishpathade/Satish-Personal-Portfolio.git
 
 ## Contact
 
