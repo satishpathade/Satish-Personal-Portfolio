@@ -2,7 +2,7 @@
 
 This is my personal portfolio website created using HTML, CSS, and JavaScript. The website is fully responsive and includes sections like Home, About Me, Skills, Projects, and Contact. It also includes smooth scrolling and basic animations to improve user experience.
 
-The main purpose of this portfolio is to showcase my web development skills and personal projects. It also serves as a digital resume where visitors can learn more about me and how to contact me..
+The main purpose of this portfolio is to showcase my web development skills and personal projects. It also serves as a digital resume where visitors can learn more about me and how to contact me.
 
 ## Features
 

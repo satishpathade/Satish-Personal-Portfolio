@@ -2,315 +2,480 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Satish-Personal-Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Satish Pathade –  Developer exploring AWS Cloud and DevOps. Portfolio, projects, resume, and contact." />
+  <meta name="author" content="Satish Pathade" />
 
-    <!-- Favicon
+  <!-- SEO
+  ========================================== -->
+  <title>Satish Pathade | AWS Cloud & DevOps Engineer</title>
+  <meta name="description"
+    content="Satish Pathade is a Cloud and DevOps Engineer building secure, scalable, and production-ready systems using AWS, CI/CD, Docker, Kubernetes, and modern DevOps practices." />
+  <meta name="author" content="Satish Pathade" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://satishpathade.com" />
+
+
+  <!-- Favicon
      ====================================== -->
-    <link rel="icon" type="image/png" href="img/Logo.svg">
+  <link rel="icon" type="image/png" href="img/Logo.svg">
 
-    <!-- google font 
+  <!-- google font 
      ====================================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-    <!-- CSS file
+  <!-- CSS file
       ======================================= -->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style/style.css" />
 
-    <!--font icon
+  <!--font icon
     =================================================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- AOS CSS
+  <!-- AOS CSS
          ================================================= -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
-    <!-- AOS CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
 
 </head>
 
 <body>
 
-    <!-- Main Conatiner -->
-    <div class="main-container">
-        <!-- head -->
-        <header class="head">
+  <!-- Main Conatiner -->
+  <div class="main-container">
+    <!-- head -->
+    <header class="head">
 
-            <!-- desktop navbar -->
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="#home"><img src="img/Logo.svg" alt=""></a>
-                </div>
+      <!-- desktop navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home"><img src="img/Logo.svg" alt="Satish Pathade logo"></a>
+        </div>
 
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#works">Works</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#connect">Connect</a>
-                </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#works">Works</a>
+          <a href="#resume">Resume</a>
+          <a href="#connect">Connect</a>
+        </div>
 
-                <div class="contact-icon">
-                    <a href="https://github.com/satishpathade"><i class="fa-brands fa-square-github"
-                            id="i-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/satish-pathade"><i class="fa-brands fa-linkedin"
-                            id="i-logo"></i></a>
-                    <a href="https://x.com/_satishpathade"><i class="fa-brands fa-square-x-twitter" id="i-logo"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-instagram" id="i-logo"></i></a>
-                </div>
-                <!-- menu -->
-                <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
+        <div class="contact-icon">
+          <a href="https://github.com/satishpathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-square-github" id="i-logo"></i></a>
+          <a href="https://www.linkedin.com/in/satish-pathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-linkedin" id="i-logo"></i></a>
+          <a href="https://x.com/_satishpathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-square-x-twitter" id="i-logo"></i></a>
+        </div>
+        <!-- menu -->
+        <i class="fa-solid fa-bars" id="menu-icon" role="button" aria-label="Toggle navigation menu" tabindex="0"></i>
 
-            </nav>
+      </nav>
 
-            <!-- Mobile Overlay Menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="#home">Home</a>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#works">Works</a>
-                <a href="#resume">Resume</a>
-                <a href="#connect">Connect</a>
+      <!-- Mobile Overlay Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" >Home</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#resume">Resume</a>
+        <a href="#connect">Connect</a>
 
-                <div class="mobile-contact">
-                    <a href="https://github.com/satishpathade"><i class="fa-brands fa-square-github"></i></a>
-                    <a href="https://www.linkedin.com/in/satish-pathade"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/_satishpathade"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                </div>
-            </div>
-        </header>
+        <div class="mobile-contact">
+          <a href="https://github.com/satishpathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-square-github"></i></a>
+          <a href="https://www.linkedin.com/in/satish-pathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/_satishpathade" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+      </div>
+    </header>
 
 
-        <!-- main-home-page 
+    <!-- main-home-page 
      =========================================================== -->
-        <section class="home-modern" id="home">
-            <div class="home-img">
-                <img src="img/satish.png" alt="satishimg" data-aos="fade-right" data-aos-duration="700">
-            </div>
-            <div class="home-text">
-                <p class="name" data-aos="fade-left">I'm Satish Pathade</p>
-                <p class="line2" data-aos="fade-left">Development and Deployment <br> to deliver seamless user
-                    experiences..</p>
-                <span id="element"></span>
-            </div>
-        </section>
+    <section class="home-modern" id="home">
+      <div class="home-img">
+        <img src="img/satish.png" alt="Portrait of Satish Pathade" data-aos="fade-right" data-aos-duration="700">
+      </div>
+      <div class="home-text">
+        <p class="name" data-aos="fade-left">I'm Satish Pathade</p>
+        <p class="line2" data-aos="fade-left">Development and deployment <br>to deliver seamless user experiences.</p>
+        <span id="element"></span>
+      </div>
+    </section>
 
-        <!-- about-page
+    <!-- about-page
      =========================================================== -->
-        <section class="about-modern" id="about" data-aos="fade-up">
-            <div class="container">
-                <div class="container-top-section">
-                    <div class="about-text">
-                        <p class="subtitle" data-aos="fade-up">About Me</p>
-                        <h1 data-aos="fade-up" data-aos-duration="400">My passion and goal is to help you make your
-                            business standout.</h1>
+    <section class="about-modern" id="about" data-aos="fade-up">
+      <div class="container">
+        <div class="container-top-section">
+          <div class="about-text">
+            <p class="subtitle" data-aos="fade-up">About Me</p>
+            <h1 data-aos="fade-up" data-aos-duration="400">My goal is to help your business stand out through reliable
+              and well-engineered solutions.</h1>
 
-                        <div class="profile-para">
-                            <p data-aos="fade-up" data-aos-duration="400">
-                                A passionate and dedicated Full-Stack Developer with a focus on creating seamless,
-                                responsive, and user-friendly web applications.
+            <div class="profile-para">
+              <p data-aos="fade-up" data-aos-duration="400">
+                An AWS-focused cloud engineer building secure, scalable, and production-ready systems. I work with core
+                AWS services to design, deploy, and manage cloud workloads, with a strong focus on reliability and
+                continuous improvement.
 
-                                I'm diving deeper into Cloud Computing and DevOps to enhance my deployment skills
-                                and build scalable, production-ready systems. I believe in continuous learning and love
-                                tackling new challenges that push me beyond my limits.
-
-                                My goal is to contribute to impactful projects that make a real difference while
-                                continuously evolving as a developer and problem-solver.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                A DevOps-focused engineer building reliable, automated, and production-ready systems. I work with CI/CD
+                pipelines, infrastructure automation, and containerized environments to deliver stable and scalable
+                applications.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- work section 
+    <!-- skills section 
      ========================================================= -->
-        <section class="work-modern" id="works">
-            <div class="work-container">
+    <section class="skills-modern" id="skills">
+      <div class="skills-inner">
+        <div class="skills-header" data-aos="fade-up">
+          <h2 class="skills-title">Skills &amp; Tools</h2>
+          <p class="skills-subtitle">
+            A practical DevOps and cloud skill set proven through real deployments, production-focused projects, and
+            ongoing learning.
+          </p>
+        </div>
 
-                <div class="work-text">
-                    <p class="subtitle" id="works" data-aos="fade-up">Works</p>
-                    <h1 data-aos="fade-up" data-aos-duration="400">"Turning ideas into immersive digital experiences
-                        take a look at what I’ve built."</h1>
-                </div>
+        <div class="skills-grid">
+          <article class="skill-card" data-aos="fade-up" data-aos-delay="80">
+            <h3 class="skill-heading">AWS Cloud</h3>
+            <p class="skill-text">
+              Building and operating AWS workloads by connecting core services into reliable production environments.
+            </p>
+            <ul class="skill-list">
+              <li>EC2</li>
+              <li>VPC</li>
+              <li>S3</li>
+              <li>RDS</li>
+              <li>Route 53</li>
+              <li>CloudWatch</li>
+              <li>IAM</li>
+              <li>AWS CLI & SDK</li>
+            </ul>
+          </article>
 
-                <div class="project-card" data-aos="fade-left">
-                    <img src="img/portfolio.png" alt="Project Thumbnail">
-                    <div class="project-info">
-                        <h3>Personal Portfolio</h3>
-                        <p>Crafted to impress — this sleek portfolio fuses elegant design, interactive animations, and
-                            responsive layouts to tell my developer story in style..</p>
-                        <a href="https://github.com/satishpathade/Satish-Personal-Portfolio.git"
-                            class="view-btn">Inspect the Build</a>
-                    </div>
-                </div>
+          <article class="skill-card" data-aos="fade-up" data-aos-delay="140">
+            <h3 class="skill-heading">DevOps</h3>
+            <p class="skill-text">
+              Automating build, test, and deployment pipelines to ship changes reliably and consistently.
+            </p>
+            <ul class="skill-list">
+              <li>Version Control : Git</li>
+              <li>Automation & CI/CD: GitHub Actions, Jenkins</li>
+              <li>Infrastructure as Code: Terraform, Ansible</li>
+              <li>Containers & Orchestration: Docker, Docker Compose, Kubernetes</li>
+              <li>Monitoring & Visualization: Prometheus, Grafana</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <div class="project-card" data-aos="fade-right">
-                    <img src="img/simon-says-game-thumb.jpg" alt="Project Thumbnail">
-                    <div class="project-info">
-                        <h3>Simon Say's Game</h3>
-                        <p> Test your memory in this dynamic Simon Says game — crafted with HTML, CSS & JavaScript to
-                            highlight my DOM and event handling skills.</p>
-                        <a href="https://github.com/satishpathade/Simon-Says-Game.git" class="view-btn">Try Now</a>
-                    </div>
+    <!-- work section 
+======================================================== -->
+    <section class="work-modern" id="works">
+      <div class="work-inner">
+
+        <!-- HEADER -->
+        <div class="work-header" data-aos="fade-up">
+          <h2 class="work-title">Crafted Experiences & Engineered Systems</h2>
+          <p class="work-subtitle">
+            A curated collection of cloud and DevOps solutions showcasing AWS infrastructure, CI/CD automation, and
+            production-ready systems.
+          </p>
+        </div>
+
+        <!-- FILTERS (optional, can remove if you don't want) -->
+        <div class="work-filters" data-aos="fade-up" data-aos-delay="120">
+          <button class="work-filter-btn active" data-filter="all">All</button>
+          <button class="work-filter-btn" data-filter="cloud">Cloud</button>
+          <button class="work-filter-btn" data-filter="devops">DevOps</button>
+        </div>
+
+        <!-- DevOps tool filters (shown only when DevOps is selected) -->
+        <div class="work-filters work-filters-devops" id="devopsFilters">
+          <button class="devops-filter-btn" data-tool="jenkins">Jenkins</button>
+          <button class="devops-filter-btn" data-tool="terraform">Terraform</button>
+          <button class="devops-filter-btn" data-tool="ansible">Ansible</button>
+          <button class="devops-filter-btn" data-tool="docker">Docker</button>
+          <button class="devops-filter-btn" data-tool="kubernetes">Kubernetes</button>
+          <button class="devops-filter-btn" data-tool="prometheus">Prometheus</button>
+          <button class="devops-filter-btn" data-tool="grafana">Grafana</button>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="projects-grid">
+          <!-- AWS Cloud Projects  -->
+
+          <!-- PROJECT 1: CloudVault -->
+          <article class="project-card" data-filter="cloud" data-aos="fade-up" data-aos-delay="140">
+            <div class="project-media">
+              <img src="img/work-bg.jpg" alt="Cloud & DevOps Project">
+              <div class="project-overlay">
+                <div class="project-cta">
+                  <a href="https://github.com/satishpathade/CloudVault" target="_blank" class="project-btn">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
                 </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-label">AWS Cloud</span>
+              </div>
+              <h3 class="project-title">CloudVault – Secure File Upload &amp; Storage</h3>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: CSV-datapipeline -->
+          <article class="project-card" data-filter="cloud" data-aos="fade-up" data-aos-delay="180">
+            <div class="project-media">
+              <img src="img/simon-says-game-thumb.jpg" alt="csv-datapipeline">
+              <div class="project-overlay">
+                <div class="project-cta">
+                  <a href="https://github.com/satishpathade/csv-data-pipeline-project" target="_blank"
+                    class="project-btn">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-label">AWS Cloud</span>
+              </div>
+              <h3 class="project-title">CSV - Data Pipeline
+              </h3>
+            </div>
+          </article>
+
+
+          <!-- DevOps Projects -->
+
+          <!-- JENKINS PROJECT 1: Java-app-CICD -->
+          <article class="project-card" data-category="devops" data-tools="jenkins">
+            <div class="project-media">
+              <img src="img/simon-says-game-thumb.jpg" alt="java-app">
+              <div class="project-overlay">
+                <div class="project-cta">
+                  <a href="https://github.com/satishpathade/java-app-CICD.git" target="_blank" class="project-btn">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-label">DevOps</span>
+              </div>
+              <h3 class="project-title">Java-app-CICD pipeline
+              </h3>
+            </div>
+          </article>
+
+          <!-- JENKINS PROJECT 2: Python-app-CICD -->
+          <article class="project-card" data-category="devops" data-tools="jenkins">
+            <div class="project-media">
+              <img src="img/simon-says-game-thumb.jpg" alt="python-app">
+              <div class="project-overlay">
+                <div class="project-cta">
+                  <a href="https://github.com/satishpathade/python-app-CICD.git" target="_blank" class="project-btn">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-label">DevOps</span>
+              </div>
+              <h3 class="project-title">Python-app-CICD pipeline
+              </h3>
+            </div>
+          </article>
+
+          <!-- JENKINS PROJECT 3: node-app-freestyle -->
+          <article class="project-card" data-category="devops" data-tools="jenkins">
+            <div class="project-media">
+              <img src="img/simon-says-game-thumb.jpg" alt="node-app">
+              <div class="project-overlay">
+                <div class="project-cta">
+                  <a href="https://github.com/satishpathade/node-app-freestyle.git" target="_blank" class="project-btn">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-label">DevOps</span>
+              </div>
+              <h3 class="project-title">Node-app-freestyle Pipeline
+              </h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- resume section 
+     ========================================================= -->
+    <section id="resume" class="resume-modern">
+      <div class="container">
+        <p class="subtitle" data-aos="fade-up">RESUME</p>
+        <h2 data-aos="fade-up">Education &nbsp;<i class="fas fa-graduation-cap"></i></h2>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="career-entry">
+              <h4>BCA <span>Bachelor of Computer Application</span></h4>
+              <small>August 2022 – May 2025</small>
+              <p>Built a strong foundation in programming, web development, and databases through hands-on
+                academic and project-based learning
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="career-entry">
+              <h4>MCA<span>Master in Cloud Architecture</span></h4>
+              <small>June 2025 - Present</small>
+              <p>
+                Specializing in cloud infrastructure and DevOps, focusing on CI/CD, deployment
+                automation,
+                and scalable architectures
+              </p>
+              <p>
+                <a href="mca-certificate.pdf" target="_blank" rel="noopener noreferrer">View MCA certificate</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <h2 data-aos="fade-up">Experience &nbsp;<i class="fas fa-briefcase"></i> </h2>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="career-entry">
+              <h4>Cravita Technology<span> Cloud Computing Intern</span></h4>
+              <small>June 2025 – Jan</small>
+              <p>
+                Worked on real-time cloud solutions, from automating deployments to optimizing
+                infrastructure using modern DevOps tools
+              </p>
+
+              <a href="mca-certificate.pdf" target="_blank" rel="noopener noreferrer">View Intern certificate </a>
 
             </div>
-        </section>
+          </div>
+        </div>
 
-        <!-- resume section 
-     ========================================================= -->
-        <section id="resume" class="resume-modern">
-            <div class="container">
-                <h2 data-aos="fade-up">Education &nbsp;<i class="fas fa-graduation-cap"></i></h2>
-                <div class="timeline">
-
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="career-entry">
-                            <h4>BCA <span>Bachelor of Computer Application</span></h4>
-                            <small>August 2022 – May 2025</small>
-                            <p>Built a strong foundation in programmig, web development, and databases through hands-on
-                                academic and project-based learning
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="career-entry">
-                            <h4>MCA<span>Master in Cloud Architect</span></h4>
-                            <small>June 2025 – Present</small>
-                            <p>
-                                Specializing in cloud infrastructure and DevOps, focusing on CI/CD, deployment
-                                automation,
-                                and scalable architectures
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <h2 data-aos="fade-up">Experience &nbsp;<i class="fas fa-briefcase"></i> </h2>
-                <div class="timeline">
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="career-entry">
-                            <h4>Cravita Technology<span>MERN Stack Intern</span></h4>
-                            <small>June 2025 – Jan</small>
-                            <p>
-                                Crafted dynamic web apps using the MERN Stack-developing clean UI components and
-                                efficient
-                                backend logic
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="career-entry">
-                            <h4>Cravita Technology<span> Cloud Computing Intern</span></h4>
-                            <small>June 2025 – Jan</small>
-                            <p>
-                                Worked on real-time cloud solutions from automating developments to optimizing
-                                infrastructure using modern DevOps tools
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <h2 data-aos="fade-up">Ready For</h2>
-                <div class="skills" data-aos="fade-up">
-                    <div class="skill" data-aos="fade-up">
-                        <span>Web Design</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill" data-aos="fade-up">
-                        <span>MERN Stack Developer</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill" data-aos="fade-up">
-                        <span>Cloud Engineer AWS</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill" data-aos="fade-up">
-                        <span>DevOps Engineer</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="download" data-aos="fade">
-                        <a href="resume.pdf" download class="resume-btn">Download CV</a>
-                    </div>
-                </div>
+        <div class="skills" data-aos="fade-up">
+          <div class="skill" data-aos="fade-up">
+            <span>Web Design</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
             </div>
-        </section>
+          </div>
+          <div class="skill" data-aos="fade-up">
+            <span>Full-Stack (MERN) Development</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill" data-aos="fade-up">
+            <span>AWS Cloud (Learning)</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="skill" data-aos="fade-up">
+            <span>CI/CD &amp; DevOps (Learning)</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 55%;"></div>
+            </div>
+          </div>
 
-        <!-- connect section 
+          <div class="download" data-aos="fade">
+            <a href="resume.pdf" download class="resume-btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- connect section 
      ========================================================= -->
-        <section class="connect-modern" id="connect">
-            <div class="connect-container">
-                <div class="touch-text" data-aos="fade-up">
-                    <p class="touch">get in touch</p>
-                </div>
+    <section class="connect-modern" id="connect">
+      <div class="connect-container">
+        <div class="touch-text" data-aos="fade-up">
+          <p class="touch">get in touch</p>
+        </div>
 
-                <div class="connect-mail" data-aos="fade-up">
-                    <a href="mailto:pathadesatish0@gmail.com" class="connect-email">pathadesatish0@gmail.com</a>
-                </div>
+        <div class="connect-mail" data-aos="fade-up">
+          <a href="mailto:pathadesatish0@gmail.com" class="connect-email">pathadesatish0@gmail.com</a>
+        </div>
 
-                <div class="connect-para">
-                    <p data-aos="fade-up">Great ideas deserve to be built and meaningful work begins
-                        with a simple
-                        “Hello.”
-                        Whether you're exploring something new, looking to collaborate, or just want to connect my inbox
-                        is always open.
-                        <a href="mailto:pathadesatish0@gmail.com">Email</a>
-                    </p>
-                </div>
+        <div class="connect-para">
+          <p data-aos="fade-up">
+            Open to Cloud and DevOps roles. I believe great systems are built with care, and meaningful work often
+            starts with a simple <b>hello.</b> Whether you’re hiring, exploring a new idea, or looking to collaborate,
+            my inbox is always open.
+            <a href="mailto:pathadesatish0@gmail.com">Say hello</a>
+          </p>
+        </div>
 
 
-                <!-- Footer Section 
-                 ============================================> -->
-                <footer class="footer-section">
-                    <div class="footer-container">
-                        <div class="footer-note">
-                            <p>&copy; 2025 Satish Pathade. All rights reserved.</p>
-                            <p>Crafted with passion & precision by <strong>Satish Pathade</strong>.</p>
-                        </div>
-                    </div>
-                </footer>
-        </section>
-    </div>
+        <!-- Footer Section 
+                ============================================> -->
+        <footer class="footer-section" aria-label="Site footer">
+          <div class="footer-container">
+            <div class="footer-note">
+              <p>&copy; 2026 <b>Satish Pathade</b> All rights reserved.</p>
+            
+            </div>
+            <p><a href="#home" class="top">Back to top</a></p>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
 
-    <!-- type.JS annimation -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- type.JS annimation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- JS file  -->
-    <script src="app.js"> </script>
-
-    <!-- AOS Initialization -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- JS file  -->
+  <script src="js/app.js"> </script>
 
 </body>
 
